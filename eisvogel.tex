@@ -876,6 +876,15 @@ $endif$
 $endif$
 $endif$
 
+% centering all images
+% by: https://tex.stackexchange.com/posts/262384/revisions
+
+\usepackage{letltxmacro}
+\LetLtxMacro{\oig}{\includegraphics}
+\renewcommand{\includegraphics}[2][]{%
+  {\centering\oig[#1]{#2}\par}%
+}
+
 %%
 %% end added
 %%
